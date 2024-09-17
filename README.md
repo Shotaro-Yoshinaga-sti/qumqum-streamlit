@@ -4,6 +4,8 @@
 
 ```bash
 
+cp .env.sample .env
+
 # ライブラリのインストール
 pip install -r requirements.txt
 

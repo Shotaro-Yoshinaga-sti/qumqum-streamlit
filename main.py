@@ -17,11 +17,16 @@ def main():
     top_page = st.Page(page="contents/top_page.py", title="Top", icon=":material/home:")
     about = st.Page(page="contents/about.py", title="About", icon=":material/apps:")
     chat = st.Page(page="contents/chat.py", title="Chat", icon=":material/chat:")
+    non_robot_chat = st.Page(
+        page="contents/non-robot-chat.py",
+        title="Non-Robot Chat",
+        icon=":material/chat:",
+    )
 
     if st.session_state.robot_connection:
         pg = st.navigation([top_page, chat, about])
     else:
-        pg = st.navigation([top_page])
+        pg = st.navigation([top_page, non_robot_chat])
 
     pg.run()
 
